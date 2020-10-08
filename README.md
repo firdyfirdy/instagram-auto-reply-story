@@ -1,8 +1,6 @@
 # Instagram Auto Reply Story
 Tools for automatically reply your target followers story, including Slides Story, Questions Story, Polls Story.
 
-/**![Screenshoot](Images/Screenshoot.png)**/
-
 ## Features
 You can automatically Reply Stories, Reply Questions Stories, Slides Stories, and Polls Stories to your Followers Instagram Target, so you can targeting your audience for your Instagram Account.
 
