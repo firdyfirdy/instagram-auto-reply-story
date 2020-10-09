@@ -212,6 +212,36 @@ namespace InstaAutoReplyStory.Controller
       return dataAction;
     }
 
+    public async Task<ActionModel> DoFollow(long userPk)
+    {
+      ActionModel dataAction = new ActionModel
+      {
+        Type = "Follow",
+        Username = null,
+        Status = 0
+      };
+      try
+      {
+        var follow = await HelpersApi.InstaApi.UserProcessor.FollowUserAsync(userPk);
+        if (follow.Succeeded)
+        {
+          dataAction.Status = 1;
+          dataAction.Response = $"[+] {dataAction.Type} | Status: Success";
+        }
+        else
+        {
+          dataAction.Response = $"[+] {dataAction.Type} | Status: Failed | Error: {follow.Info.Message}";
+        }
+
+      }
+      catch (Exception ex)
+      {
+
+        dataAction.Response = $"[+] {dataAction.Type} | Status: Failed | Error: {ex.Message}";
+      }
+      return dataAction;
+    }
+
     public async Task<ActionModel> DoSeeStory(string storyMediaId, long takenAtUnix)
     {
       ActionModel action = new ActionModel()
@@ -242,7 +272,7 @@ namespace InstaAutoReplyStory.Controller
       return action;
     }
 
-    public async Task<ActionModel> DoVoteSlideStory(string storyMediaId, long SliderId)
+    public async Task<ActionModel> DoSlideStory(string storyMediaId, long SliderId)
     {
       ActionModel action = new ActionModel()
       {
@@ -291,7 +321,7 @@ namespace InstaAutoReplyStory.Controller
         else
         {
           action.Status = 1;
-          action.Response = $"[+] {action.Type} | Status: Success";
+          action.Response = $"[+] {action.Type} | Status: Success | Text: {text}";
         }
       }
       catch (Exception ex)
