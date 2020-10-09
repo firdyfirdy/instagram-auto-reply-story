@@ -7,7 +7,7 @@ You can automatically Reply Stories, Reply Questions Stories, Slides Stories, an
 ## Cross Platform
 This software build using .NET Core so you need read this: [Dotnet Core Docs](https://docs.microsoft.com/en-us/dotnet/core/deploying/).<br>
 <b>How to run:</b><br>
-- For Windows, you need to install [Dotnet Core Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) and then you can download release files.<br>
+- For Windows, you need to install [Dotnet Core Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) and then you can download from latest release files.<br>
 - For other Operating System like Linux and MacOs, you need to compile this source code first, and run it.
 
 
