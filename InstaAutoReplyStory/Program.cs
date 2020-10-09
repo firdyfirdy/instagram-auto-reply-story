@@ -19,7 +19,7 @@ namespace InstaAutoReplyStory
       var consoleRed = ConsoleColor.Red;
       var consoleGreen = ConsoleColor.Green;
 
-      HelpersApi.WriteLine("Instagram Auto Follows, Comments, and Likes!", consoleGreen);
+      HelpersApi.WriteLine("Instagram Auto Reply Stories!", consoleGreen);
       HelpersApi.WriteLine("Contact me: me@firdy.dev", consoleGreen);
       Console.WriteLine();
 
